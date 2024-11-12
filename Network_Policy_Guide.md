@@ -221,7 +221,7 @@ spec:
 
 ### **참고 자료**
 
-- [Istio 공식 문서 - Ambient Mesh와 Kubernetes NetworkPolicy](https://istio.io/latest/docs/ops/deployment/ambient/network-policy/)
+- [Istio 공식 문서 - Ambient Mesh와 Kubernetes NetworkPolicy](https://istio.io/latest/docs/ambient/usage/networkpolicy/)
 - [Kubernetes 공식 문서 - 네트워크 폴리시](https://kubernetes.io/ko/docs/concepts/services-networking/network-policies/)
 - [AWS EKS 공식 문서 - Amazon VPC CNI](https://docs.aws.amazon.com/eks/latest/userguide/pod-networking.html)
 - [AWS 블로그 - EKS에서 네트워크 폴리시 사용하기](https://aws.amazon.com/ko/blogs/opensource/network-policies-eks/)
