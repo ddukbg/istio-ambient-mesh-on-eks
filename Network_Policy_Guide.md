@@ -1,7 +1,5 @@
 ## ** 네트워크 폴리시 설정 가이드**
 
-**파일명**: `Network_Policy_Guide.md`
-
 ### **목차**
 
 1. [소개](#소개)
@@ -10,7 +8,6 @@
    - [ztunnel과 애플리케이션 Pod 간의 통신 허용](#ztunnel과-애플리케이션-pod-간의-통신-허용)
    - [ztunnel 간의 통신 허용](#ztunnel-간의-통신-허용)
    - [웨이포인트와의 통신 설정 (필요 시)](#웨이포인트와의-통신-설정-필요-시)
-   - [컨피그 서버와의 통신 허용](#컨피그-서버와의-통신-허용)
 4. [네트워크 폴리시 적용 시 주의사항](#네트워크-폴리시-적용-시-주의사항)
 5. [테스트 및 검증 방법](#테스트-및-검증-방법)
 6. [참고 자료](#참고-자료)
@@ -125,56 +122,6 @@ spec:
           port: 15008
 ```
 
-#### **컨피그 서버와의 통신 허용**
-
-**이유**: 애플리케이션 Pod가 초기화 시 필요한 설정 값을 가져오기 위해 컨피그 서버와 통신해야 합니다.
-
-**동일한 네임스페이스에 있을 경우**:
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: allow-app-to-config-server
-  namespace: your-app-namespace
-spec:
-  podSelector: {}
-  policyTypes:
-    - Egress
-  egress:
-    - to:
-        - podSelector:
-            matchLabels:
-              app: config-server
-      ports:
-        - protocol: TCP
-          port: your-config-server-port
-```
-
-**다른 네임스페이스에 있을 경우**:
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: allow-app-to-config-server
-  namespace: your-app-namespace
-spec:
-  podSelector: {}
-  policyTypes:
-    - Egress
-  egress:
-    - to:
-        - namespaceSelector:
-            matchLabels:
-              name: config-server-namespace
-          podSelector:
-            matchLabels:
-              app: config-server
-      ports:
-        - protocol: TCP
-          port: your-config-server-port
-```
 
 ### **네트워크 폴리시 적용 시 주의사항**
 
