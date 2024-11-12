@@ -144,6 +144,6 @@ spec:
 
 ### **참고 자료**
 
-- [Istio 공식 문서 - 네트워크 폴리시](https://istio.io/latest/docs/ops/deployment/requirements/)
+- [Istio 공식 문서 - 앰비언트 네트워크 폴리시](https://istio.io/latest/docs/ambient/usage/networkpolicy/)
 - [Kubernetes 공식 문서 - 네트워크 폴리시](https://kubernetes.io/ko/docs/concepts/services-networking/network-policies/)
 
