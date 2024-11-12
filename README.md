@@ -1,17 +1,5 @@
 ## **EKS 환경에서 Istio Ambient Mesh 설치 가이드**
 
-## 목차
-
-1. [소개](#소개)
-2. [전제 조건](#전제-조건)
-3. [Istio Ambient Mesh 설치](#istio-ambient-mesh-설치)
-4. [네트워크 폴리시 설정 가이드](Network_Policy_Guide.md)
-5. [샘플 애플리케이션 배포 및 테스트](Sample_Application_Deployment.md)
-6. [모니터링 및 로깅 설정](Monitoring_and_Logging.md)
-7. [고급 구성 예제](Advanced_Configurations.md)
-8. [참고 자료](#참고-자료)
-
-
 ### **전제 조건**
 
 1. **Kubernetes 클러스터 준비**: EKS 클러스터가 이미 생성되어 있어야 합니다.
@@ -461,3 +449,8 @@ Istio를 제거해야 하는 경우 다음 단계를 따릅니다.
 
 EKS 환경에서 Istio Ambient Mesh를 설치하기 위해서는 몇 가지 추가적인 설정과 고려사항이 있습니다. 특히 네트워크 폴리시를 사용하는 경우, Ambient Mesh 구성 요소들이 원활하게 통신할 수 있도록 필요한 통신을 허용하는 폴리시를 설정해야 합니다.
 
+## 추가 자료
+1. [네트워크 폴리시 설정 가이드](Network_Policy_Guide.md)
+2. [샘플 애플리케이션 배포 및 테스트](Sample_Application_Deployment.md)
+3. [모니터링 및 로깅 설정](Monitoring_and_Logging.md)
+4. [고급 구성 예제](Advanced_Configurations.md)
