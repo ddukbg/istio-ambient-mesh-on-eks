@@ -184,6 +184,8 @@ $ helm install istio-ingress istio/gateway -n istio-ingress --create-namespace -
 
 - 클러스터에서 LoadBalancer 타입의 서비스에 외부 IP가 할당되지 않는다면 `--wait` 옵션을 제거하여 무한 대기를 방지합니다.
 
+- 만약 컨테이너 이미지가 auto로 나오며 image 에러가 발생 시 하위 이슈를 참고하여 웹훅 포트를 열어줘야합니다.
+https://github.com/istio/istio/issues/35789#issuecomment-2591508690
 ---
 
 ### **6. 설치 확인**
