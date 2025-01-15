@@ -51,6 +51,9 @@ Istio는 `istioctl`이라는 명령줄 도구를 사용하여 설치 및 관리�
 
 ### **2. Istio Ambient Mode 설치**
 
+> [!NOTE]
+> Istio의 전용 오퍼레이터인 `istio-operator`를 사용한 설치 방식은 Istio 1.23 버전부터 지원 중단(Deprecated) 되었습니다. Ambient Mesh를 새로 설치하는 사용자는 helm 차트 또는 istioctl로 설치하는 방식이 권장됩니다. 자세한 사항은 Istio의 공식 뉴스 [Istio has deprecated its In-Cluster Operator](https://istio.io/latest/blog/2024/in-cluster-operator-deprecation-announcement/)를 참고하세요.
+
 Ambient Mesh를 설치하기 위해서는 `ambient` 프로파일을 사용해야 합니다.
 
 1. **Istio 설치**:
